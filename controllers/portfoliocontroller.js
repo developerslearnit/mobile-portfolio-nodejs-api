@@ -18,7 +18,7 @@ module.exports = {
                     author: req.body.author_id,
                     category: req.body.category_id,
                     title: req.body.title,
-                    image_url: resp.url,
+                    image_url: '',
                     description: req.body.description,
                     web_url: req.body.web_url
                }).save((err, response) => {
