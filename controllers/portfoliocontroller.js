@@ -13,6 +13,27 @@ module.exports = {
 
      add: (req, res, next) => {
 
+          if(req.files.count==0){
+               var portfolio = new Portfolio({
+                    author: req.body.author_id,
+                    category: req.body.category_id,
+                    title: req.body.title,
+                    image_url: resp.url,
+                    description: req.body.description,
+                    web_url: req.body.web_url
+               }).save((err, response) => {
+                    if (err) {
+                         res.status(400).json({ status: 0, message: JSON.stringify(err) });
+                    } else {
+                         res.status(201).json({
+                              status: 1,
+                              message: 'Portfolio has been created successfully',
+                              data: response
+                         });
+                    }
+               });
+          }else{
+
           cloudinary.uploader.upload(req.files.file.path, (resp) => {
 
                var portfolio = new Portfolio({
@@ -35,6 +56,7 @@ module.exports = {
                });
 
           });
+     }
      },
      getAll: (req, res, next) => {
           Portfolio.find({}, 'category title image_url description web_url')

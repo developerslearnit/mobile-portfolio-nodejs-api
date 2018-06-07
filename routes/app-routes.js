@@ -1,5 +1,6 @@
 var userCtrl = require('../controllers/user.controller'),
-	catCtrl = require('../controllers/category.controller');
+	catCtrl = require('../controllers/category.controller'),
+	portfolioCtrl =require('../controllers/portfoliocontroller');
 var multipart = require('connect-multiparty')();
 
 module.exports = function (express, app) {
@@ -15,6 +16,8 @@ module.exports = function (express, app) {
 	router.get('/api/v1/users', userCtrl.get);
 	router.post('/api/v1/categories',catCtrl.add);
 	router.get('/api/v1/categories',catCtrl.get);
+
+	router.post('/api/v1/portfolios',portfolioCtrl.add);
 	app.use('/', router);
 
 }
