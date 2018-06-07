@@ -1,5 +1,5 @@
 module.exports = {
-     'serverPort':5000,
+     'serverPort':8000,
      'dbUrl':'mongodb://mark2kk:Ayo1Folakemi@ds251240.mlab.com:51240/mobile-portfolio',
      'cloud_name': 'panachora',
      'api_key': '536743972335811',
