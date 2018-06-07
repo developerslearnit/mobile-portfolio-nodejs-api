@@ -14,6 +14,7 @@ module.exports = function (express, app) {
 	router.post('/api/v1/users', multipart, userCtrl.register);
 	router.get('/api/v1/users', userCtrl.get);
 	router.post('/api/v1/categories',catCtrl.add);
+	router.get('/api/v1/categories',catCtrl.get);
 	app.use('/', router);
 
 }

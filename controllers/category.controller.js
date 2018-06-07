@@ -17,6 +17,13 @@ var Category = require('../interfaces/category'),
                          });
                     }
                });
+          },
+
+          get:(req,res,next)=>{
+               Category.find({}, (err, result)=> {
+                    if (err) return next(err);
+                    res.status(200).json({ status: 1, message: null, count: result.length, data: result });
+               });
           }
 
      }
