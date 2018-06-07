@@ -1,0 +1,36 @@
+{
+  "name": "mobile-portfolio-nodejs-api",
+  "version": "1.0.0",
+  "description": "A NodeJS API for mobile portfolio app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/developerslearnit/mobile-portfolio-nodejs-api.git"
+  },
+  "keywords": [
+    "nodejs",
+    "api",
+    "express"
+  ],
+  "author": "Adesina Mark Omoniyi",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",
+    "cloudinary": "^1.4.4",
+    "connect-multiparty": "^2.0.0",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "mongoose": "^5.1.4"
+  },
+  "engines": {
+    "node": "8.11.2"
+  },
+  "bugs": {
+    "url": "https://github.com/developerslearnit/mobile-portfolio-nodejs-api/issues"
+  },
+  "homepage": "https://github.com/developerslearnit/mobile-portfolio-nodejs-api#readme"
+}
