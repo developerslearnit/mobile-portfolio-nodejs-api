@@ -13,7 +13,7 @@ module.exports = {
 
      add: (req, res, next) => {
 
-          if(req.files.count==0){
+          if(!req.files){
                var portfolio = new Portfolio({
                     author: req.body.author_id,
                     category: req.body.category_id,
