@@ -1,6 +1,6 @@
 var userCtrl = require('../controllers/user.controller'),
 	catCtrl = require('../controllers/category.controller'),
-	portfolioCtrl =require('../controllers/portfoliocontroller');
+	portfolioCtrl =require('../controllers/portfolio.controller');
 var multipart = require('connect-multiparty')();
 
 module.exports = function (express, app) {
